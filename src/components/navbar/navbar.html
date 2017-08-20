@@ -1,0 +1,27 @@
+<ion-grid no-padding>
+  <ion-row no-padding align-items-center>
+    <ion-col col-1>
+      <button left ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-4>
+      <ion-title>
+        {{title}}
+      </ion-title>
+    </ion-col>
+    <ion-col col-2>
+      <img [src]="imgSrc"/>
+    </ion-col>
+    <ion-col col-5>
+      <ion-buttons end>
+        <button *ngFor="let button of buttons" ion-button icon-only (click)="buttonClicked(button)">
+          <ion-icon [name]="button.iconName"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+

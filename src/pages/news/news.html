@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <my-navbar title="Home" imgSrc="assets/img/meerkat-logo.png" [buttons]="[{id: 'refresh', iconName: 'refresh'}]"
+               (buttonClickedEvent)="navBarButtonClicked($event)"></my-navbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of articles" (click)="openArticle(item.link)">
+    <img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/p/7/005/0b9/1ac/3833b83.jpg"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{item.title}}
+      </ion-card-title>
+      <!--<p [innerHtml]="item.description"></p>-->
+      <p>{{item.description}}</p>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
