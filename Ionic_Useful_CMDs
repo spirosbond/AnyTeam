@@ -1,0 +1,72 @@
+# Ionic/Cordova commands:
+
+# Install/Uninstall:
+npm install -g ionic cordova
+npm uninstall -g ionic
+npm cache clean
+
+# Create app:
+# tabs : a simple 3 tab layout
+# sidemenu: a layout with a swipable menu on the side
+# blank: a bare starter with a single page
+# super: starter project with over 14 ready to use page designs
+# tutorial: a guided starter project
+
+ionic start MyFirstApp $template$
+
+# Add/Remove Android/iOS platform:
+ionic platform add android
+ionic platform rm android
+ionic platform add ios
+ionic platform rm ios
+
+# Add/Remove plugins:
+ionic cordova plugin add [plugin] --save
+ionic cordova plugin rm [plugin]
+
+# Show plugins:
+ionic cordova plugin list
+
+# Usefull plugins:
+ionic cordova plugin add cordova-sqlite-storage --save
+
+ionic plugin add cordova-plugin-statusbar --save
+npm install @ionic-native/status-bar --save
+
+ionic plugin add cordova-plugin-splashscreen --save
+npm install @ionic-native/splash-screen --save
+
+ionic plugin add ionic-plugin-keyboard --save
+npm install @ionic-native/keyboard --save
+
+ionic cordova plugin add cordova-plugin-whitelist --save
+
+ionic cordova plugin add cordova-plugin-crosswalk-webview --save
+
+ionic cordova plugin add https://github.com/driftyco/cordova-plugin-wkwebview-engine.git --save
+
+# Create pages/components etc:
+ionic g [page|component|directive|pipe|provider|tabs] NameGoesHere
+
+# Create icon and splash screen resources:
+ionic cordova resources
+
+# Run on browser:
+ionic serve android
+ionic serve ios
+
+
+# Run debug on android/ios:
+ionic cordova run android --livereload
+ionic cordova run ios --livereload
+
+# Run signed on android:
+ionic cordova run android --prod --release
+
+# Build release apk:
+ionic cordova build android --prod --release
+ionic cordova build ios --prod --release
+
+# Sign Android apk:
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore "C:\Users\Spyridon\Dropbox\Shared Folders\Meerkat\spyrjimylo.jks" "C:/Users/Spyridon/IdeaProjects/IonicTeamTemplate/platforms/android/build/outputs/apk/android-release-unsigned.apk" SJM
+"C:\Program Files (x86)\Android\android-sdk\build-tools\26.0.1\zipalign" -v 4 "C:/Users/Spyridon/IdeaProjects/IonicTeamTemplate/platforms/android/build/outputs/apk/android-release-unsigned.apk" "C:/Users/Spyridon/IdeaProjects/IonicTeamTemplate/platforms/android/build/outputs/apk/android-release-signed.apk"
