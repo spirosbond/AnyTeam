@@ -4,6 +4,8 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
 import {TabsPage} from '../pages/tabs/tabs';
+import {AboutPage} from "../pages/about/about";
+import {ContactPage} from "../pages/contact/contact";
 
 @Component({
   templateUrl: 'app.html'
@@ -13,7 +15,9 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    {title: 'Home', component: TabsPage}
+    {title: 'Home', component: TabsPage},
+    {title: 'About', component: AboutPage},
+    {title: 'Contact', component: ContactPage},
   ];
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public menuCtrl: MenuController) {

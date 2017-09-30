@@ -15,6 +15,9 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {FeedProvider} from '../providers/feed/feed';
 import {NavbarComponentModule} from "../components/navbar/navbar.module";
+import {TeamListPage} from "../pages/team-list/team-list";
+import { TeamProvider } from '../providers/team/team';
+import {TeamPage} from "../pages/team/team";
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import {NavbarComponentModule} from "../components/navbar/navbar.module";
     AboutPage,
     ContactPage,
     NewsPage,
-    TabsPage
+    TabsPage,
+    TeamListPage,
+    TeamPage
   ],
   imports: [
     BrowserModule,
@@ -37,14 +42,17 @@ import {NavbarComponentModule} from "../components/navbar/navbar.module";
     AboutPage,
     ContactPage,
     NewsPage,
-    TabsPage
+    TabsPage,
+    TeamListPage,
+    TeamPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FeedProvider,
-    InAppBrowser
+    InAppBrowser,
+    TeamProvider
   ]
 })
 export class AppModule {
