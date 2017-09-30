@@ -15,7 +15,7 @@ export class NewsPage {
 
   constructor(public navCtrl: NavController, public iab: InAppBrowser, public platform: Platform, public feedProvider: FeedProvider, public loadingCtrl: LoadingController) {
 
-    this.selectedFeed = new Feed('Android Police', 'http://www.androidpolice.com/feed/');
+    this.selectedFeed = new Feed('NBA.com: News', 'http://www.nba.com/rss/nba_rss.xml');
 
   }
 
