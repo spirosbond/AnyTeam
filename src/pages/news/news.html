@@ -6,6 +6,14 @@
 </ion-header>
 
 <ion-content>
+
+  <ion-refresher (ionRefresh)="pullToRefresh($event)">
+    <ion-refresher-content
+      pullingText="Pull to refresh"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
   <ion-card *ngFor="let item of articles" (click)="openArticle(item.link)">
     <img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/p/7/005/0b9/1ac/3833b83.jpg"/>
     <ion-card-content>

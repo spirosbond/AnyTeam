@@ -12,6 +12,7 @@ export class NewsPage {
   articles: FeedItem[];
   selectedFeed: Feed;
   inAppBrowserOptions = 'location=no';
+  loading: Loading;
 
   constructor(public navCtrl: NavController, public iab: InAppBrowser, public platform: Platform, public feedProvider: FeedProvider, public loadingCtrl: LoadingController) {
 
@@ -20,24 +21,32 @@ export class NewsPage {
   }
 
   public loadArticles(): void {
-    // this.loading = true;
-    let loading = this.presentLoadingDefault();
+
     this.articles = [];
     this.feedProvider.getArticlesForUrl(this.selectedFeed.url).subscribe(res => {
       this.articles = res;
-      loading.dismiss()
-      // this.loading = false;
+      this.loading.dismiss()
+
     });
   }
 
   public navBarButtonClicked(clickedButtonId): void {
     if (clickedButtonId == 'refresh') {
+      this.loading = this.presentLoadingDefault();
       this.loadArticles();
     }
   }
 
+  public pullToRefresh(refresher){
+    setTimeout(() => {
+      this.loadArticles();
+      refresher.complete();
+    }, 5000);
+  }
+
   ionViewDidLoad() {
     this.platform.ready().then(() => {
+      this.loading = this.presentLoadingDefault();
       this.loadArticles();
     });
   }
@@ -48,12 +57,12 @@ export class NewsPage {
   }
 
   public presentLoadingDefault(): Loading {
-    let loading = this.loadingCtrl.create({
+    this.loading = this.loadingCtrl.create({
       content: 'Please wait...'
     });
 
-    loading.present();
-    return loading;
+    this.loading.present();
+    return this.loading;
   }
 
 }
