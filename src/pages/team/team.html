@@ -12,15 +12,150 @@
 
 
 <ion-content>
-  <ion-card *ngFor="let item of roster">
-    <ion-item>
-      <ion-avatar item-start>
-        <ion-img src="{{item.picture}}"></ion-img>
-      </ion-avatar>
-      <h2>{{item.name}} {{item.surname}}</h2>
-      <p>{{item.position}}</p>
-    </ion-item>
+  <ion-slides centeredSlides="false" pager="true" paginationType="bullets">
+    <ion-slide>
 
-  </ion-card>
+      <ion-card *ngFor="let item of roster">
+        <ion-item>
+          <ion-avatar item-start>
+            <ion-img src="{{item.picture}}"></ion-img>
+          </ion-avatar>
+          <h2>{{item.name}} {{item.surname}}</h2>
+          <p>{{item.position}}</p>
+        </ion-item>
+      </ion-card>
+
+    </ion-slide>
+    <ion-slide>
+
+      <ion-card>
+        <ion-card-header>
+          Tue 3/10
+        </ion-card-header>
+        <ion-item>
+          <ion-avatar item-start>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/BOS.svg"></ion-img>
+          </ion-avatar>
+          <h2 text-center>BOS vs BKN</h2>
+          <ion-avatar item-end>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/BKN.svg"></ion-img>
+          </ion-avatar>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          Wed 4/10
+        </ion-card-header>
+        <ion-item>
+          <ion-avatar item-start>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/ATL.svg"></ion-img>
+          </ion-avatar>
+          <h2 text-center>BOS vs BKN</h2>
+          <ion-avatar item-end>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/BKN.svg"></ion-img>
+          </ion-avatar>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          Thu 5/10
+        </ion-card-header>
+        <ion-item>
+          <ion-avatar item-start>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/BKN.svg"></ion-img>
+          </ion-avatar>
+          <h2 text-center>BOS vs BKN</h2>
+          <ion-avatar item-end>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/CLE.svg"></ion-img>
+          </ion-avatar>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          Sat 7/10
+        </ion-card-header>
+        <ion-item>
+          <ion-avatar item-start>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/BKN.svg"></ion-img>
+          </ion-avatar>
+          <h2 text-center>BOS vs BKN</h2>
+          <ion-avatar item-end>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/CHI.svg"></ion-img>
+          </ion-avatar>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          Mon 9/10
+        </ion-card-header>
+        <ion-item>
+          <ion-avatar item-start>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/CHA.svg"></ion-img>
+          </ion-avatar>
+          <h2 text-center>BOS vs BKN</h2>
+          <ion-avatar item-end>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/BKN.svg"></ion-img>
+          </ion-avatar>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          Tue 10/10
+        </ion-card-header>
+        <ion-item>
+          <ion-avatar item-start>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/DET.svg"></ion-img>
+          </ion-avatar>
+          <h2 text-center>BOS vs BKN</h2>
+          <ion-avatar item-end>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/BKN.svg"></ion-img>
+          </ion-avatar>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          Thu 5/10
+        </ion-card-header>
+        <ion-item>
+          <ion-avatar item-start>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/BKN.svg"></ion-img>
+          </ion-avatar>
+          <h2 text-center>BOS vs BKN</h2>
+          <ion-avatar item-end>
+            <ion-img src="http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/IND.svg"></ion-img>
+          </ion-avatar>
+        </ion-item>
+      </ion-card>
+
+    </ion-slide>
+    <ion-slide>
+
+      <ion-card>
+        <ion-card-header>
+          Record
+        </ion-card-header>
+        <ion-card-content>
+          13-2
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          PPG
+        </ion-card-header>
+        <ion-card-content>
+          13.5
+        </ion-card-content>
+      </ion-card>
+
+    </ion-slide>
+  </ion-slides>
+
+
 </ion-content>
-s
+
