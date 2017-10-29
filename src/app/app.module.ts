@@ -17,7 +17,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {FeedProvider} from '../providers/feed/feed';
 import {NavbarComponentModule} from "../components/navbar/navbar.module";
 import {TeamListPage} from "../pages/team-list/team-list";
-import { TeamProvider } from '../providers/team/team';
+import {TeamProvider} from '../providers/team/team';
 import {TeamPage} from "../pages/team/team";
 
 @NgModule({

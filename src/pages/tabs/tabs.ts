@@ -1,9 +1,7 @@
 import {Component} from '@angular/core';
 
-import {AboutPage} from '../about/about';
 import {ContactPage} from '../contact/contact';
 import {NewsPage} from '../news/news';
-import {MyApp} from '../../app/app.component'
 import {TeamListPage} from "../team-list/team-list";
 
 @Component({

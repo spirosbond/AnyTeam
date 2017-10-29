@@ -1,5 +1,5 @@
-import {Component, ViewChild} from '@angular/core';
-import {Nav, NavController, NavParams} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController} from 'ionic-angular';
 import {TeamProvider} from "../../providers/team/team";
 import {TeamPage} from "../team/team";
 
@@ -18,7 +18,7 @@ export class TeamListPage {
 
   teams: any[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public teamProvider: TeamProvider) {
+  constructor(public navCtrl: NavController, public teamProvider: TeamProvider) {
     this.teams = [];
   }
 

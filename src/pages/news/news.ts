@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, Loading, LoadingController, NavController, Platform} from 'ionic-angular';
+import {Loading, LoadingController, NavController, Platform} from 'ionic-angular';
 import {InAppBrowser} from '@ionic-native/in-app-browser';
 import {Feed, FeedItem, FeedProvider} from "../../providers/feed/feed";
 import {SocialSharing} from "@ionic-native/social-sharing";
