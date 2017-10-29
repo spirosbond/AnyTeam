@@ -16,13 +16,16 @@ import {TeamProvider} from "../../providers/team/team";
 export class TeamPage {
 
   roster: any[];
+  team: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public teamProvider: TeamProvider) {
+    this.roster = [];
+    this.team = navParams.get("team");
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TeamPage');
-    this.roster = this.teamProvider.getRoster('dummy');
+    this.roster = this.team.players;
   }
 
 }

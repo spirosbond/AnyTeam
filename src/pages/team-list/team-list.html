@@ -14,13 +14,22 @@
 <ion-content>
   <ion-card *ngFor="let item of teams" (click)="showTeam(item)">
     <img src="{{item.picture}}"/>
-    <ion-card-content>
-      <ion-card-title>
-        {{item.name}}
-      </ion-card-title>
-      <!--<p [innerHtml]="item.description"></p>-->
-      <p></p>
-    </ion-card-content>
+    <ion-row align-items-center>
+      <ion-col>
+        <ion-card-content>
+          <ion-card-title left>
+            {{item.name}}
+          </ion-card-title>
+          <!--<p [innerHtml]="item.description"></p>-->
 
+        </ion-card-content>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>Feed</ion-label>
+          <ion-toggle [(ngModel)]="item.feedToggle" (ionChange)="feedToggle(item)" checked="{{item.feedToggle}}"></ion-toggle>
+        </ion-item>
+      </ion-col>
+    </ion-row>
   </ion-card>
 </ion-content>

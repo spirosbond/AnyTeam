@@ -19,15 +19,22 @@ export class TeamListPage {
   teams: any[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public teamProvider: TeamProvider) {
+    this.teams = [];
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TeamListPage');
-    this.teams = this.teamProvider.getAllTeams();
+    this.teamProvider.loadAllTeams(this.teams);
+
+  }
+
+  public feedToggle(team){
+    console.log('FeedToggle: '+team.feedToggle);
+    this.teamProvider.setFeedToggle(team,team.feedToggle);
   }
 
   public showTeam(team){
-    this.navCtrl.push(TeamPage)
+    this.navCtrl.push(TeamPage,{team: team})
   }
 
 }
