@@ -5,6 +5,7 @@ import {MyApp} from './app.component';
 import {InAppBrowser} from '@ionic-native/in-app-browser';
 import {HttpModule} from '@angular/http';
 import {IonicStorageModule} from "@ionic/storage";
+import {SocialSharing} from '@ionic-native/social-sharing';
 
 import {AboutPage} from '../pages/about/about';
 import {ContactPage} from '../pages/contact/contact';
@@ -52,7 +53,8 @@ import {TeamPage} from "../pages/team/team";
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FeedProvider,
     InAppBrowser,
-    TeamProvider
+    TeamProvider,
+    SocialSharing
   ]
 })
 export class AppModule {

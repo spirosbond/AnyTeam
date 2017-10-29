@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {IonicPage, Loading, LoadingController, NavController, Platform} from 'ionic-angular';
 import {InAppBrowser} from '@ionic-native/in-app-browser';
 import {Feed, FeedItem, FeedProvider} from "../../providers/feed/feed";
+import {SocialSharing} from "@ionic-native/social-sharing";
 
 @Component({
   selector: 'page-news',
@@ -14,7 +15,7 @@ export class NewsPage {
   inAppBrowserOptions = 'location=no';
   loading: Loading;
 
-  constructor(public navCtrl: NavController, public iab: InAppBrowser, public platform: Platform, public feedProvider: FeedProvider, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public iab: InAppBrowser, public platform: Platform, public feedProvider: FeedProvider, public loadingCtrl: LoadingController, public socialSharing: SocialSharing) {
 
     this.selectedFeed = new Feed('NBA.com: News', 'http://www.nba.com/rss/nba_rss.xml');
 
