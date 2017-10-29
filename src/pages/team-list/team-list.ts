@@ -28,13 +28,13 @@ export class TeamListPage {
 
   }
 
-  public feedToggle(team){
-    console.log('FeedToggle: '+team.feedToggle);
-    this.teamProvider.setFeedToggle(team,team.feedToggle);
+  public feedToggle(team) {
+    console.log('FeedToggle: ' + team.feedToggle);
+    this.teamProvider.setFeedToggle(team, team.feedToggle);
   }
 
-  public showTeam(team){
-    this.navCtrl.push(TeamPage,{team: team})
+  public showTeam(team) {
+    this.navCtrl.push(TeamPage, {team: team})
   }
 
 }

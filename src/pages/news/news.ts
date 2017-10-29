@@ -38,7 +38,7 @@ export class NewsPage {
     }
   }
 
-  public pullToRefresh(refresher){
+  public pullToRefresh(refresher) {
     setTimeout(() => {
       this.loadArticles();
       refresher.complete();
