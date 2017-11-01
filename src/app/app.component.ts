@@ -6,6 +6,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {TabsPage} from '../pages/tabs/tabs';
 import {AboutPage} from "../pages/about/about";
 import {ContactPage} from "../pages/contact/contact";
+import {TeamProvider} from "../providers/team/team";
 
 @Component({
   templateUrl: 'app.html'
@@ -20,11 +21,12 @@ export class MyApp {
     {title: 'Contact', component: ContactPage},
   ];
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public menuCtrl: MenuController) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public menuCtrl: MenuController, public teamProvider: TeamProvider) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
+      teamProvider.createDemoTeams();
       splashScreen.hide();
     });
   }
