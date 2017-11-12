@@ -11,7 +11,7 @@
       </ion-title>
     </ion-col>
     <ion-col col-2>
-      <img [src]="imgSrc"/>
+      <img *ngIf="imgSrc" [src]="imgSrc"/>
     </ion-col>
     <ion-col col-5>
       <ion-buttons end>

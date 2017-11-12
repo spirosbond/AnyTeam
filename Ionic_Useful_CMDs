@@ -21,7 +21,7 @@ ionic cordova platform add ios
 ionic cordova platform rm ios
 
 # Add/Remove plugins:
-ionic cordova plugin add [plugin] --save
+ionic cordova plugin add [plugin]@latest
 ionic cordova plugin rm [plugin]
 
 # Show plugins:
@@ -30,13 +30,13 @@ ionic cordova plugin list
 # Usefull plugins:
 ionic cordova plugin add cordova-sqlite-storage --save
 
-ionic plugin add cordova-plugin-statusbar --save
+ionic cordova plugin add cordova-plugin-statusbar --save
 npm install @ionic-native/status-bar --save
 
-ionic plugin add cordova-plugin-splashscreen --save
+ionic cordova plugin add cordova-plugin-splashscreen --save
 npm install @ionic-native/splash-screen --save
 
-ionic plugin add ionic-plugin-keyboard --save
+ionic cordova plugin add ionic-plugin-keyboard --save
 npm install @ionic-native/keyboard --save
 
 ionic cordova plugin add cordova-plugin-whitelist --save
@@ -46,6 +46,9 @@ ionic cordova plugin add cordova-plugin-crosswalk-webview --save
 ionic cordova plugin add https://github.com/driftyco/cordova-plugin-wkwebview-engine.git --save
 
 ionic cordova plugin add cordova-plugin-x-socialsharing --save
+
+ionic cordova plugin add de.appplant.cordova.plugin.local-notification --save
+npm install --save @ionic-native/local-notifications
 
 # Create pages/components etc:
 ionic g [page|component|directive|pipe|provider|tabs] NameGoesHere
