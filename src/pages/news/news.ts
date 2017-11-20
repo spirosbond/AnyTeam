@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Loading, LoadingController, NavController, Platform} from 'ionic-angular';
+import {Loading, LoadingController, NavController, Platform, Refresher} from 'ionic-angular';
 import {InAppBrowser} from '@ionic-native/in-app-browser';
 import {Feed, FeedItem, FeedProvider} from "../../providers/feed/feed";
 import {SocialSharing} from "@ionic-native/social-sharing";
@@ -14,6 +14,7 @@ export class NewsPage {
   selectedFeed: Feed;
   inAppBrowserOptions = 'location=no';
   loading: Loading;
+  refresher: Refresher;
 
   constructor(public navCtrl: NavController, public iab: InAppBrowser, public platform: Platform, public feedProvider: FeedProvider, public loadingCtrl: LoadingController, public socialSharing: SocialSharing) {
 
@@ -27,6 +28,7 @@ export class NewsPage {
     this.feedProvider.getArticlesForUrl(this.selectedFeed.url).subscribe(res => {
       this.articles = res;
       this.loading.dismiss()
+      if (this.refresher != null) this.refresher.complete();
 
     });
   }
@@ -39,8 +41,10 @@ export class NewsPage {
   }
 
   public pullToRefresh(refresher) {
+    this.refresher = refresher;
+    this.loadArticles();
+
     setTimeout(() => {
-      this.loadArticles();
       refresher.complete();
     }, 5000);
   }

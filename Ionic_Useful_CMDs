@@ -46,9 +46,13 @@ ionic cordova plugin add cordova-plugin-crosswalk-webview --save
 ionic cordova plugin add https://github.com/driftyco/cordova-plugin-wkwebview-engine.git --save
 
 ionic cordova plugin add cordova-plugin-x-socialsharing --save
+npm install --save @ionic-native/social-sharing
 
 ionic cordova plugin add de.appplant.cordova.plugin.local-notification --save
 npm install --save @ionic-native/local-notifications
+
+ionic cordova plugin add cordova-plugin-inappbrowser --save
+npm install --save @ionic-native/in-app-browser
 
 # Create pages/components etc:
 ionic g [page|component|directive|pipe|provider|tabs] NameGoesHere

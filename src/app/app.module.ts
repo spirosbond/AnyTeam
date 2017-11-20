@@ -6,6 +6,7 @@ import {InAppBrowser} from '@ionic-native/in-app-browser';
 import {HttpModule} from '@angular/http';
 import {IonicStorageModule} from "@ionic/storage";
 import {SocialSharing} from '@ionic-native/social-sharing';
+import {LocalNotifications} from '@ionic-native/local-notifications';
 
 import {AboutPage} from '../pages/about/about';
 import {ContactPage} from '../pages/contact/contact';
@@ -54,7 +55,8 @@ import {TeamPage} from "../pages/team/team";
     FeedProvider,
     InAppBrowser,
     TeamProvider,
-    SocialSharing
+    SocialSharing,
+    LocalNotifications
   ]
 })
 export class AppModule {

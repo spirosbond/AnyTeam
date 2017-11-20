@@ -44,7 +44,7 @@ export class FeedProvider {
 
   public addFeed(newFeed: Feed) {
     return this.getSavedFeeds().then(arrayOfFeeds => {
-      arrayOfFeeds.push(newFeed)
+      arrayOfFeeds.push(newFeed);
       let jsonString = JSON.stringify(arrayOfFeeds);
       return this.storage.set('savedFeeds', jsonString);
     });
